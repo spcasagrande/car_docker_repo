@@ -10,7 +10,7 @@ node('ubuntu-appserver-CWEB2140')
     stage('Build-and-Tag')
     {
         // building the actual image
-        app.docker.build('spcasagrande/car_docker_repo')
+        app = docker.build('spcasagrande/car_docker_repo')
     }
 
     stage('Post-to-Dockerhub')
